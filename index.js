@@ -65,7 +65,7 @@ function userElon() {
     var urlParams = new URLSearchParams();
     //note: this is where you insert your url for github pages
     urlParams.set("user", "user1");
-    window.location.href = "https://ryangreenlightcodingdev.github.io/deployeddynamictwitter/?" + urlParams.toString();
+    window.location.href = "https://ryangreenlightcodingdev.github.io/TwitterClone/?" + urlParams.toString();
 };
 
 // function to change URL to user 2
@@ -73,7 +73,7 @@ function userBill() {
     var urlParams = new URLSearchParams();
     //note: this is where you insert your url for github pages
     urlParams.set("user", "user2");
-    window.location.href = "https://ryangreenlightcodingdev.github.io/deployeddynamictwitter/?" + urlParams.toString();
+    window.location.href = "https://ryangreenlightcodingdev.github.io/TwitterClone/?" + urlParams.toString();
 };
 
 // display Bill by default, Elon if user=user1
