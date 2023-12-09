@@ -1,0 +1,433 @@
+:root {
+    --lightBlue: #1d9ae7;
+    --offWhite: #d9d9d9;
+    --darkGrey: #2f3336;
+    --grey: #6e767d;
+    --black: #000;
+    --green: #17bf63;
+    --red: #e02460;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--offWhite);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+p {
+    font-size: .8rem;
+}
+
+#container {
+    display: flex;
+    background-color: var(--black);
+}
+
+/* --------- side container only visible 500px+ ----------*/
+#container-side-menu {
+    display: none;
+}
+
+/* -------- header content --------- */
+#container-header {
+    display: flex;
+    align-items: center;
+}
+
+.left-arrow {
+    padding: 0 20px;
+}
+
+.left-arrow img {
+    height: 12px;
+}
+
+.left-arrow > a:hover {
+    cursor: pointer;
+}
+
+.top-user {
+    padding: 5px;
+}
+
+.display-name {
+    color: var(--offWhite);
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.display-name > span {
+    font-size: .7rem;
+}
+
+#no-of-tweets, .user-name {
+    color: var(--grey);
+    font-size: .8rem;
+}
+
+/*--------- cover photo ---------*/
+.cover-img > img {
+    width: 100%;
+    height: auto;
+}
+
+/*--------- profile content --------*/
+#container-profile {
+    padding: 0 15px;
+}
+
+.profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.avatar-img {
+    position: relative;
+    top: -25px;
+}
+
+.avatar-img > img {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+    border: var(--black) 2px solid;
+}
+
+/* -------- profile buttons ------- */
+.profile-buttons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.switch {
+    padding: 5px 5px;
+}
+
+#bill-button, #elon-button {
+    height: 37px;
+    width: 77px;
+    border-radius: 20px;
+    color: var(--grey);
+    background-color: var(--black);
+    border: 1px solid var(--grey);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#bill-button:hover, #elon-button:hover {
+    cursor: pointer;
+    color: var(--lightBlue);
+    border: 1px solid var(--lightBlue);
+    transition: ease-in .3s;
+}
+
+/* ------- profile info -------- */
+.profile-info > p {
+    display: inline;
+    vertical-align: middle;
+}
+
+.about {
+    color: var(--offWhite);
+    font-size: .8rem;
+    letter-spacing: .4px;
+    padding: 10px 0;
+}
+
+.additional-info {
+    color: var(--grey);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.additional-info a {
+    color: var(--lightBlue);
+    font-size: .8rem;
+    text-decoration: none;
+    padding: 0 10px 5px 10px;
+}
+
+p > i {
+    padding-right: 5px;
+}
+
+.additional-info a > i {
+    color: var(--grey);
+}
+
+.following-followers {
+    display: flex;
+    padding: 10px 0;
+}
+
+.following {
+    padding-right: 15px;
+}
+
+.following-p, .followers-p {
+    color: var(--grey);
+    border-bottom: 1px solid var(--black);
+    transition: ease-in .3s;
+}
+
+.following-p a, .followers-p a {
+    color: var(--offWhite);
+    font-weight: 800;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: ease-in .3s;
+}
+
+.following-p:hover, .followers-p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid var(--offWhite);
+    transition: ease-in .3s;
+}
+
+
+/* --------tabs----------- */
+#container-tabs {
+    display: flex;   
+    border-bottom: 1px solid var(--darkGrey);
+    margin: 0 -15px;
+}
+
+.tab {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey);
+    font-weight: 800;
+    height: 50px;
+    transition: ease-in .3s;
+}
+
+.tab:hover {
+    cursor: pointer;
+    background-color: rgba(29, 161, 242, 0.1);
+    transition: ease-in .3s;
+}
+
+.tab p {
+    font-size: .843rem;
+    letter-spacing: .3px;
+}
+
+.active {
+    color: var(--lightBlue);
+    border-bottom: 2px solid var(--lightBlue);
+}
+
+/* ------ tweets --------- */
+#container-tweets {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-div {
+    display: flex;
+    padding-top: 10px;
+}
+
+.tweet-div:not(:last-child) {
+    border-bottom: 1px solid var(--darkGrey);
+}
+
+.tweet-avatar {
+    padding: 0 10px 15px 15px;
+}
+
+.tweet-avatar img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.tweet-inner-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-details {
+    display: flex;
+    align-items: center;
+}
+
+.tweet-created {
+    font-size: .8rem;
+    padding-left: 5px;
+}
+
+.tweet-display-name p{
+    color: var(--offWhite);
+    font-size: .9rem;
+    font-weight: 800;
+}
+
+.tweet-display-name p span {
+    margin-left: -10px;
+}
+
+.tweet-created {
+    color: var(--grey);
+}
+
+.tweet-body {
+    padding-right: 10px;
+}
+
+.tweet-body p{
+    color: var(--offWhite);
+    font-size: .9rem;
+}
+
+/* ---------- tweet icons ---------- */
+.tweet-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.tweet-icon {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: ease-in .3s;
+}
+
+.reply:hover, .share:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+    transition: ease-in .3s;
+}
+
+.retweet:hover {
+    background-color: rgba(23, 191, 99, 0.15);
+    transition: ease-in .3s;
+}
+
+.like:hover {
+    background-color: rgba(224, 36, 94, 0.15);
+    transition: ease-in .3s;
+}
+
+.tweet-icon a {
+    color: var(--grey);
+    padding: 0 25px;
+    transition: ease-in .3s;
+}
+
+.reply a:hover, .share a:hover {
+    color: var(--lightBlue);
+    transition: ease-in .3s;
+}
+
+.retweet a:hover {
+    color: var(--green);
+    transition: ease-in .3s;
+}
+
+.like a:hover {
+    color: var(--red);
+    transition: ease-in .3s;
+}
+
+/* -------- menu container ------- */
+#container-bottom-menu {
+    border-top: 1px solid var(--darkGrey);
+    padding: 5px 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: ease-in .3s;
+}
+
+.menu-item:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+    transition: ease-in .3s;
+}
+
+.menu-item a {
+    color: var(--grey);
+    transition: ease-in .3s;
+}
+
+.menu-item a:hover {
+    color: var(--lightBlue);
+    transition: ease-in .3s;
+
+}
+
+.menu-twitter, .menu-bookmark, .menu-user {
+    font-size: 2rem;
+}
+
+.menu-home {
+    font-size: 2.2rem;
+}
+
+.menu-search, .menu-message {
+    font-size: 1.7rem;
+}
+
+.menu-notify, .menu-list {
+    font-size: 1.6rem
+}
+
+
+
+/* -------- media queries ---------- */
+
+@media screen and (min-width: 500px) {
+    #container {
+        max-width: 600px;
+        border-right: 1px solid var(--darkGrey);
+    }
+    
+    #container-bottom-menu {
+        display: none;
+    }
+
+    #container-side-menu {
+        display: block;
+        width: 100px;
+        padding: 0 10px;
+        border-left: 1px solid var(--darkGrey);
+        border-right: 1px solid var(--darkGrey);
+    }
+}
