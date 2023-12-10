@@ -11,7 +11,7 @@ var user1 = {
     coverPhotoURL: 'assets/elonmusk-cover.jpeg',
     tweets: [
         {
-            text: 'I admit to judging books by their cover',
+            text: 'When something is important enough, you do it even if the odds aren\'t in your favor.',
             timestamp: '2/10/2021 00:01:20'
         },
         {
@@ -38,7 +38,7 @@ var user2 = {
     coverPhotoURL: 'assets/billgates-cover.jpeg',
     tweets: [
         {
-            text: 'Single and ready to mingle. #swipeRightForBill',
+            text: 'It\'s fine to celebrate success, but it is more important to heed the lessons of failure',
             timestamp: '3/05/2021 12:32:50'
         },
         {
